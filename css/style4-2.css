@@ -1,0 +1,110 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans KR', serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #333;
+  font-weight: 300;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* Reset CSS */
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 500;
+  margin-top: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+/* Dropdown Navigation */
+.program {
+  display: flex;
+  justify-content: center;
+}
+.inner {
+  width: 1150px;
+  /* margin: auto; */
+}
+.program h1 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.program h2 {}
+.items {
+  display: flex;
+  gap: 40px;
+}
+.item {
+  flex: 1;
+  position: relative;
+}
+.item-list {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0;
+}
+.item:nth-child(1) .item-list {
+  background-color: #195fab;
+}
+.item:nth-child(2) .item-list {
+  background-color: #5049a9;
+}
+.item:nth-child(3) .item-list {
+  background-color: #8c66c1;
+}
+.item-list h4 {
+  font-weight: 300;
+}
+.item-list .btn {
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  margin: 3px;
+  width: 80px;
+  display: inline-block;
+}
+.btn.download {
+  width: 200px;
+}
+.item-desc {
+  position: absolute;
+  padding: 15px;
+  border: 3px solid #000;
+  font-size: 14px;
+  background-color: #fff;
+  display: none;
+}
+.item:nth-child(1) .item-desc {
+  border: 3px solid #195fab;
+}
+.item:nth-child(2) .item-desc {
+  border: 3px solid #5049a9;
+}
+.item:nth-child(3) .item-desc {
+  border: 3px solid #8c66c1;
+}
+.item-desc p {
+  text-align: center;
+}
+.item-desc ul {
+  padding: 5px;
+  margin-bottom: 15px;
+  background-color: #eee;
+}
+.item-desc li {}
+.item-desc li::before {
+  content:'- ';
+}
+

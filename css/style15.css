@@ -1,0 +1,134 @@
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* Noonnu Korean Fonts */
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', 'Noto Sans KR', serif;
+  margin: 0;
+  line-height: 1.6em;
+  font-size: 15px;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+/* Shopping UI Items */
+section {}
+.heading {
+  font-family: 'GmarketSansLight';
+  font-size: 40px;
+  text-align: center;
+}
+.heading span {
+  color: deeppink;
+}
+.items-inner {
+  width: 1350px;
+  margin: auto;
+}
+.items-inner h2 {
+  /* margin-left: 10px; */
+}
+.items {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 20px; /*ie 지원 안함*/
+  counter-reset: item;
+}
+.item {
+  flex: 1;
+  position: relative;
+}
+.item::before {
+  content: counter(item);
+  counter-increment: item;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: gray;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 0 0 10px 0;
+  transition: .5s;
+}
+.item:hover::before {
+  background-color: crimson;
+}
+.photo {
+  position: relative;
+  height: 390px;
+}
+.photo a {
+}
+.photo a img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: .5s;
+}
+.photo a img:first-child {
+  z-index: 1;
+}
+.photo:hover a img:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+.detail {
+  position: relative;
+}
+.detail span {
+  display: block;
+}
+.price {}
+.price b {
+  color: crimson;
+  margin-right: 10px;
+}
+.name {
+  font-weight: 400;
+}
+.count {
+  color: #777;
+}
+.like {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  top: 0;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+.like::before {
+  content:'\f08a';
+  font-family: fontawesome;
+  font-size: 18px;
+  color: #999;
+}
+.like.active::before {
+  content:'\f004';
+  color: crimson;
+}

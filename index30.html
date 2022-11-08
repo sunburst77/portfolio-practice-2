@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript & jQuery - 사운드 재생 제어하기 </title>
+  <link rel="stylesheet" href="css/style30.css">
+</head>
+<body>
+  <h1>자바스크립트 사운드 재생 제어하기</h1>
+  <div class="buttons">
+    <button id="btn-play-pause">Play <i class="fa fa-play" aria-hidden="true"></i></button>
+    <button id="btn-stop">Stop<i class="fa fa-stop" aria-hidden="true"></i></button>
+  </div>
+  <audio id="audio" src="images/mountain-sky-bgm.mp3"></audio>
+
+  <div class="audio-status">
+    <span style="height: 30%"></span>
+    <span style="height: 100%"></span>
+    <span style="height: 70%"></span>
+    <span style="height: 40%"></span>
+  </div>
+
+  <script>
+    let playEl = document.querySelector('#btn-play-pause'),
+        audioEl = document.querySelector('#audio'),
+        stopEl = document.querySelector('#btn-stop'),
+        audioStatusEl = document.querySelector('.audio-status'),
+        playStatus = 0;
+
+    function playPause() {
+      if(playStatus == 0) {
+        playStatus = 1;
+        audioEl.play();
+        playEl.innerHTML = 'Pause <i class="fa fa-pause" aria-hidden="true"></i>';
+        audioStatusEl.classList.add('active');
+      }
+      else {
+        playStatus = 0;
+        audioEl.pause();
+        playEl.innerHTML = 'Play <i class="fa fa-play" aria-hidden="true"></i>';
+        audioStatusEl.classList.remove('active');
+      }
+    }
+    function stop() {
+      playPause();
+      audioEl.pause();
+      audioEl.currentTime = 0;
+      playEl.innerHTML = 'Play <i class="fa fa-play" aria-hidden="true"></i>';
+      audioStatusEl.classList.remove('active');
+    }
+
+    playEl.addEventListener('click', function(){
+      playPause()
+    })
+    stopEl.addEventListener('click', function(){
+      stop()
+    })
+  </script>
+</body>
+</html>

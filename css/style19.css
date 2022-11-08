@@ -1,0 +1,189 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Noto Sans KR', serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #222;
+  font-weight: 300;
+  background-color: #f5f6f7;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+/* Reset CSS */
+input, button, select {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Member Sign in */
+.member {
+  width: 460px;
+  margin: auto;
+  /* padding: 0 20px; */
+}
+.member .logo {
+  display: block;
+  margin: 50px auto;
+}
+
+.member .field {
+  margin: 5px 0;
+}
+.member .field b {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.member input:not(input[type=radio]),
+.member select {
+  padding: 15px;
+  border: 1px solid #dadada;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.member input:not(input[type=radio]):focus,
+.member select:focus {
+  border: 1px solid #2db400;
+}
+.member input[type=button],
+.member input[type=submit] {
+  background-color: #2db400;
+  color: #fff;
+}
+.field .placehold-text {
+  position: relative;
+  display: block;
+}
+.field .placehold-text::before {
+  content: attr(data-text);
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  pointer-events: none;
+}
+.field .userpw {
+  background: #fff url('../images/icon-01.png') no-repeat center right 15px;
+  background-size: 20px;
+}
+.field .userpw-confirm {
+  background: #fff url('../images/icon-02.png') no-repeat center right 15px;
+  background-size: 20px;
+}
+.field.birth {}
+.field.birth div {
+  display: flex;
+  gap: 10px;
+}
+.field.gender {
+  margin-bottom: 15px;
+}
+.field.gender label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.field.gender input[name=gender] {
+  display: none;
+}
+.field.gender em {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url('../images/icon-radio.png') no-repeat left;
+  /* vertical-align: middle;
+  margin-top: -2px; */
+  transform: translateY(5px);
+}
+.field.gender input[name=gender]:checked + em {
+  background-position: right;
+}
+.field.gender div {
+  padding: 15px 5px;
+  background-color: #fff;
+  border: 1px solid #dadada;
+}
+.field.tel-number {
+}
+.field.tel-number div {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0;
+}
+.field.tel-number input[type=tel] {
+  flex: 2;
+}
+.field.tel-number input[type=button] {
+  flex: 1;
+}
+.member-footer {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 12px;
+}
+.member-footer div a:nth-child(2) {
+  font-weight: 500;
+}
+.member-footer div a::after {
+  content:'|';
+  font-size: 10px;
+  color: #bbb;
+  margin-right: 5px;
+  padding-left: 7px;
+  display: inline-block;
+  transform: translateY(-2px);
+}
+.member-footer div a:last-child::after {
+  display: none;
+}
+.member-footer a:hover {
+  color: #2db400;
+  text-decoration: underline;
+}
+
+/* Custom Select & Number */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url('../images/icon-select.png') no-repeat center right 15px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* 파이어폭스에서의 초기화 방법 */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/* input type number custom css style */
+
+@media only all and (max-width: 768px) {
+  .member {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .member-footer {
+    font-size: 10px;
+  }
+  .member-footer div a::after {
+    margin-right: 3px;
+    padding-left: 5px;
+    transform: scale(0.8) translateY(-1px);
+}

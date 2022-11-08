@@ -1,0 +1,239 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', serif;
+  outline: none;
+}
+body {
+  margin: 0;
+  line-height: 1.6em;
+  font-size: 15px;
+  color: #333;
+  /* font-weight: 300; */
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Common CSS */
+.inner {
+  width: 1450px;
+  margin: auto;
+  position: relative;
+}
+
+/* ################# Header ################# */
+header {}
+
+/* Banner */
+.banner {
+  position: relative;
+  background: linear-gradient(to right, #00202b 50%, #fff 50%);
+}
+.banner img {
+  display: block;
+}
+.close-banner {
+  position: absolute;
+  font-size: 26px;
+  right: 10px;
+  color: #aaa;
+  cursor: pointer;
+  top: 5px;
+}
+/* Lnb */
+.lnb {
+  background-color: #e2edf8;
+}
+.lnb .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lnb .inner > div {
+  padding: 15px 0;
+}
+.lnb-navi a::after {
+  content: '|';
+  font-size: 12px;
+  padding-left: 7px;
+  margin-right: 5px;
+  color: #bbb;
+  display: inline-block;
+  transform: translateY(-2px);
+}
+.lnb-navi a:last-child:after {
+  display: none;
+}
+.lnb-navi a:hover {
+  color: dodgerblue;
+}
+
+/* Gnb */
+nav {
+  background-color: #272c38;
+}
+.gnb {
+  /* height: 50px; */
+  display: flex;
+}
+.gnb li:not(:last-child) {
+  /* float: left;
+  width: calc(1400px / 6); */
+  height: 50px;
+  border-right: 1px solid rgb(92, 92, 92);
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+.gnb li:first-child,
+.gnb li:nth-child(6),
+.gnb li:last-child {
+  border-right: none;
+}
+.gnb li:first-child {
+  background-color: crimson;
+}
+.gnb li:last-child {
+  width: 50px;
+  background: #12359d;
+  position: relative;
+  transition: .35s;
+}
+.gnb li > a {
+  display: block;
+  height: 100%;
+  padding-top: 13px;
+  color: #fff;
+}
+.badge {
+  font-style: normal;
+  background-color: crimson;
+  font-size: 12px;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+.dropdown {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  /* pointer-events: none; */
+  transition: .5s;
+}
+.gnb li:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  /* pointer-events: all; */
+}
+.dropdown a {
+  display: block;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.dropdown a:last-child {
+  border-bottom: none;
+}
+.dropdown a:hover {
+  background-color: #eee;
+}
+
+/* Trigger */
+.trigger {
+  width: 25px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.trigger span {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  left: 0;
+  transition: .35s;
+}
+.trigger span:nth-child(1) {
+  top: 0;
+}
+.trigger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.trigger span:nth-child(3) {
+  bottom: 0;
+}
+.gnb li:last-child.active {
+  background-color: #fff;
+}
+.trigger.active span:nth-child(1),
+.trigger.active span:nth-child(3) {
+  top: 50%; 
+  background-color: #000;
+}
+.trigger.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+  display: none;
+}
+.trigger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Sitemap */
+.sitemap {
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  width: 100%;
+  padding: 30px 15px;
+  display: none;
+}
+.sitemap-inner {
+  display: flex;
+}
+.sitemap-inner > div {
+  flex: 1;
+  font-size: 14px;
+  line-height: 2em;
+}
+.sitemap-inner > div b {}
+.sitemap-inner > div a {
+  /* display: list-item;
+  list-style: none;
+  padding: 0; */
+  display: block;
+}
+.sitemap-inner > div a::before {
+  content: '- ';
+}
+.sitemap-inner > div a:hover {
+  text-decoration: underline;
+}
+/* Welcome */
+.welcome {
+  width: 100%;
+  overflow: hidden;
+}
+.welcome img {
+  width: inherit;
+  object-fit: cover;
+}

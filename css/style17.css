@@ -1,0 +1,157 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', serif;
+  line-height: 1.6em;
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+  background: url('../images/svg-background.svg') no-repeat center center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+
+/* Profile UI */
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile {
+  position: relative;
+  text-align: center;
+  padding: 50px 30px;
+  width: 320px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.103);
+}
+.face {
+  width: 120px;
+  display: inline-block;
+  height: 120px;
+  position: relative;
+}
+.face img {
+  border-radius: 50%;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.205);
+}
+.face i {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  background: deepskyblue;
+  color: #fff;
+  font-size: 20px;
+}
+.profile h1 {
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.profile h1 > span {
+  display: block;
+  font-size: 14px;
+  color: #bbb;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.profile p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.profile p > span {
+  display: block;
+  color: royalblue;
+}
+.view-profile {
+  background-color: #00cec9;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 30px;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 180px;
+}
+/* SNS Buttons */
+.sns {
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+.sns > div {
+  display: inline-block;
+  width: 32%;
+}
+.sns i {
+  color: #fff;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.185);
+}
+.sns > div:nth-child(1) i {
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+.sns > div:nth-child(2) i {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+.sns > div:nth-child(3) i {
+  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
+.sns span {
+  font-size: 14px;
+  color: #bbb;
+}
+.sns span big {
+  display: block;
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Top Buttons */
+.btn-mode {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+.btn-mode:before {
+  content: "\eb0f";
+  font-family: xeicon;
+}
+.like-more {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.btn-like {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.btn-like:before {
+  content: "\ea11";
+  font-family: xeicon;
+}
+.btn-more {}
+.btn-more i {}

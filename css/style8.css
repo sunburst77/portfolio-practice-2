@@ -1,0 +1,56 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', serif;
+  font-size: 15px;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  font-size: 10em;
+  font-weight: 500;
+  -webkit-text-stroke: 1px #fff;
+  transition: .3s;
+}
+.btn::before, .btn::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: 1px transparent;
+  opacity: 0;
+  transition: .3s;
+}
+.btn::before {
+  color: royalblue;
+}
+.btn::after {
+  color: crimson;
+}
+.btn:hover {
+  color: #fff;
+  -webkit-text-stroke: 1px transparent;
+}
+.btn:hover::before {
+  opacity: 1;
+  transform: translate(10px, -10px);
+}
+.btn:hover::after {
+  opacity: 1;
+  transform: translate(20px, -20px);
+}

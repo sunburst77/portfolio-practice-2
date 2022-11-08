@@ -1,0 +1,96 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Noto Sans KR', serif;
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  line-height: 1.6em;
+  font-size: 16px;
+  color: #3c4043;
+}
+body.active {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: #3c4043;
+}
+
+/* Reset CSS */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input, button {
+  border: none;
+}
+h1, h2, h3,h4,h5,h6 {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+/* Common CSS */
+/* Header */
+header {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.116);
+}
+.header-inner {
+  width: 1300px;
+  margin: auto;
+  height: 65px;
+}
+.logo {
+  float: left;
+  padding-top: 20px;
+}
+.logo img {
+}
+.gnb {
+  float: right;
+  height: 65px;
+ line-height: 65px;
+}
+.gnb a {
+  margin: 0 10px;
+  display: inline-block;
+  height: 100%;
+  line-height: 65px;
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    width: 100%;
+  }
+  .logo {
+    float: right;
+    margin-right: 20px;
+  }
+  .gnb {
+    float: none;
+    position: fixed;
+    height: 100vh;
+    background-color: #fff;
+    width: 250px;
+    top: 0; 
+    left: 0;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.123);
+  }
+}

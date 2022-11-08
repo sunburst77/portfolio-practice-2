@@ -1,0 +1,120 @@
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  /* Common CSS */
+  section {
+    padding: 20px;
+  }
+   .inner {
+    width: 100%;
+    position: static;
+    transform: translate(0);
+  }
+  /***************************************/
+  /*              Header                 */
+  /***************************************/
+  header {
+    padding: 35px 20px;
+  }
+  header .logo img {
+    width: 140px;
+  }
+  /***************************************/
+  /*          Section : Welcome          */
+  /***************************************/
+  .welcome {
+    height: 100vh;
+  }
+  
+  /* Heading */
+  .heading {
+    width: 100%;
+  }
+  .heading h1 {
+    font-size: 34px;
+  }
+  
+  /* Get Started */
+  .getstarted {
+    width: 95%;
+  }
+  .getstarted input[type=email] {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /************************************************/
+  /*    Section : Enjoy, Download, Watch, Create  */
+  /************************************************/
+  .enjoy, .download, .watch, .create {
+    height: auto;
+  }
+  .download .inner,
+  .create .inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .download .desc,
+  .create .desc {
+    order: 1;
+  }
+  .download .preview,
+  .create .preview {
+    order: 2;
+  }
+  .desc,
+  .preview {
+    float: none;
+    text-align: center;
+  }
+  .desc {
+    width: 100%;
+  }
+  .desc h2 {
+    font-size: 30px;
+  }
+  .preview {
+    width: 100%;
+  }
+  .preview img {
+    width: 100%;
+    height: auto;
+  }
+  /***************************************/
+  /*          Section : Faq       */
+  /***************************************/
+  .faq {
+    padding: 80px 20px;
+  }
+  .faq-inner {
+    width: 100%;
+  }
+  .faq-inner h1 {
+    font-size: 30px;
+    line-height: 1.3em;
+  }
+  /***************************************/
+  /*                 Footer              */
+  /***************************************/
+  footer {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .footer-inner {
+    width: 100%;
+  }
+  .links .items {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+
+  /***************************************/
+  /*              Modal Login            */
+  /***************************************/
+  .login {
+    width: 100%;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,66 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #000;
+}
+a {
+  text-decoration: none;
+}
+/* Tooltip Advanced */
+.sns {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sns a {
+  position: relative;
+  color: #fff;
+  font-size: 25px;
+  margin: 10px;
+}
+.sns a::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  color: #000;
+  background-color: #777;
+  width: 70px;
+  height: 15px;
+  line-height: 15px;
+  top: -20px;
+  font-size: 12px;
+  border-radius: 3px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+.sns a::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #777;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index:-1;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+.sns a:hover::before, .sns a:hover::after{
+  opacity: 1;
+  visibility: visible;
+}

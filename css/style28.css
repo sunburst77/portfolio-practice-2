@@ -1,0 +1,81 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', serif;
+  outline: none;
+}
+body {
+  margin: 0;
+  line-height: 1.6em;
+  font-size: 18px;
+  color: gainsboro;
+  background-color: #fff;
+  font-weight: 300;
+  background-color: #222;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* Reset CSS */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input, button {
+  border: none;
+  outline: none;
+}
+
+/* Common CSS */
+.inner {
+  width: 700px;
+  margin: auto;
+}
+
+/* Section : FAQ */
+.faq h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+.faq-title {
+  background-color: #303030;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+.faq-title:hover,
+.faq-title.active {
+  background-color: #34495e;
+}
+.faq-title i {
+  float: right;
+  font-size: 20px;
+  margin-top: 3px;
+  transition: .35s;
+}
+.faq-title.active i {
+  transform: rotate(225deg);
+}
+.faq-content {
+  background-color: #303030;
+  padding: 10px;
+  margin-bottom: 5px;
+  display: none;
+}

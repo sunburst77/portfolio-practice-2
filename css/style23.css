@@ -1,0 +1,162 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* XEION CDN */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', serif;
+  outline: none;
+}
+body {
+  margin: 0;
+  line-height: 1.6em;
+  font-size: 15px;
+  color: #222;
+  background-color: #fff;
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* Reset CSS */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input, button {
+  border: none;
+  outline: none;
+}
+
+/* Modal */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.719);
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  /* margin-top: -100px; */
+  transition: .5s;
+}
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  /* margin-top: 0; */
+}
+.modal-content {
+  width: 600px;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.274);
+  overflow: hidden;
+  background-color: #fff;
+}
+.modal-content > div {
+  padding: 20px;
+}
+.photo {
+  flex: 1;
+  background: url('../images/office.jpg') no-repeat center right;
+  background-size: cover;
+}
+/* .photo img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+  object-position: right;
+} */
+.desc {
+  flex: 2;
+  text-align: center;
+}
+.desc-header {
+
+}
+.desc-header h2 {}
+.desc-header .btn-close {
+  background: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  color: #999;
+  transition: .35s;
+  cursor: pointer;
+}
+.desc-header .btn-close:hover {
+  color: #000;
+}
+.desc-content {}
+.desc-content input[type=email],
+.desc-content button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 7px;
+}
+.desc-content input[type=email] {
+  border: 1px solid #ccc;
+}
+.desc-content input[type=email]::placeholder {
+  opacity: 1;
+  visibility: visible;
+  color: #bbb;
+  transition: .35s;
+}
+.desc-content input[type=email]:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+.desc-content button {
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+}
+.desc-content p {}
+.btn-open {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    width: 100%;
+  }
+  .modal-content > div {
+    width: 350px;
+  }
+  .photo {
+    flex-basis: 250px;
+  }
+}

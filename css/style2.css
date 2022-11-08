@@ -1,0 +1,78 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+/* Default CSS */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  line-height: 1.5em;
+  font-size: 18px;
+}
+/* Section : Welcome */
+.container {}
+.welcome {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: rgba(0, 0, 0, 0.623); */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.644), transparent);
+  overflow: hidden;
+}
+/* .welcome video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+} */
+/* object-fit */
+.welcome video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heading {
+  width: 60%;
+  text-align: center;
+  color: #fff;
+}
+.heading h1 {
+  margin-top: 0;
+  font-weight: 500;
+  line-height: 1.6em;
+  font-size: 2em;
+}
+.heading h1 span {
+  display: block;
+  color: dodgerblue;
+}
+.heading p {}
+/* Section : Content */
+.content {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+.content .inner {
+  width: 1280px;
+  display: flex;
+  gap: 70px;
+}
+.content div h2 {}
+.content div p {}

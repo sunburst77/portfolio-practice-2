@@ -1,0 +1,69 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', serif;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: #333;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Table UI */
+.member {
+  width: 900px;
+  background-color: #fff;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.158);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.member caption {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.member tr {
+  border: 1px solid #eee;
+  transition: .3s;
+}
+.member tr:last-child,
+.member tr:first-child {
+  border: none;
+}
+.member th:first-child {
+  border-radius: 5px 0 0 0;
+}
+.member th:last-child {
+  border-radius: 0 5px 0 0;
+}
+.member tr:nth-child(odd) {
+  background-color: #eee;
+}
+/* .member tr:hover {
+  background-color: #eee;
+} */
+.member th {
+  background-color: #4254f8;
+  color: #fff;
+}
+.member th, 
+.member td {
+  padding: 12px;
+  text-align: center;
+}
+.member tr td:last-child {
+  color: crimson;
+}
